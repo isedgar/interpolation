@@ -9,25 +9,33 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="subwrapper">
-            <div id="input"></div>
+        <div class="subwrapper" id="subwrapper">
+            <div id="input" class="dragscroll">
+                <div id="input_size" class="size-card"></div>
+            </div>
 
-            <div id="output"></div>
+            <div id="output" class="dragscroll">
+                <div id="output_size" class="size-card"></div>
+            </div>
         </div>
 
         <div class="actions">
-            <label for="open" class="open" id="open-btn">Open</label>
+            <label for="open" class="open" id="open-btn">Open <img src="./folder-open-l.png" alt=""></label>
             <input type="file" id="open" style="display: none;">
 
             <select name="type" id="type">
                 <option value="linear">Linear</option>
                 <option value="cubic" selected>Cubic</option>
+                <option value="lanczos">Lanczos4</option>
             </select>
 
             <input type="number" id="factor" min="0.25" max="30" step="0.25" value="3">
+
+            <div id="loader"></div>
         </div>
     </div>
 
+    <script src="dragscroll.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
