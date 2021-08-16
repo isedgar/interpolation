@@ -64,7 +64,7 @@ var inter={
     },
 
     lanczos: function(v, l, a){
-        a = a == undefined ? 4 : a; // determines the size of the kernel: a * 2 - 1
+        a = a == undefined ? 4 : a; // determines the size of the kernel: a * 2
 
         var n = v.length,
             step = n / l,
@@ -155,7 +155,7 @@ var inter={
     },
 
     bilanczos: function(m, nh, nw, a){
-        a = a == undefined ? 4 : a; // determines the size of the kernel: a * 2 - 1
+        a = a == undefined ? 4 : a; // determines the size of the kernel: a * 2
 
         var h = m.length,
             result = [],
